@@ -27,7 +27,7 @@ const label = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name}. ${site.motto}`, template: `%s | ${site.name}` },
+  title: { default: site.name, template: `%s | ${site.name}` },
   description: site.description,
   openGraph: {
     type: "website",

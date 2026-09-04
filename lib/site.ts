@@ -3,7 +3,7 @@ export const site = {
   motto: "Structure for Purpose",
   url: "https://nikolytics.com",
   description:
-    "Nikolytics designs and builds the technology and operational structure behind efficient nonprofit organizations. Using innovative technologies to streamline nonprofit data and operations, keeping administrative staffing lean as the mission scales.",
+    "Nikolytics designs and builds the technology and operational structure behind efficient nonprofit organizations.",
   calLink: "nikola-popovic/nikolytics-discovery-call",
   calUrl: "https://cal.com/nikola-popovic/nikolytics-discovery-call",
   nav: [
