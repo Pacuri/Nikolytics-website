@@ -50,6 +50,11 @@ export default function TestimonialVideo() {
             fill
             sizes="(max-width: 1080px) 88vw, 700px"
           />
+          <span className="testimonial-play-cue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
         </button>
       )}
       {failed && (

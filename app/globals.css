@@ -230,6 +230,40 @@
     cursor: pointer;
   }
   .testimonial-poster img { object-fit: contain; }
+  .testimonial-play-cue {
+    position: absolute;
+    left: 5.95%;
+    top: 75.25%;
+    width: 6.2%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--cream);
+    background: var(--teal);
+    box-shadow: 0 2px 10px rgba(16, 44, 38, .2);
+    transition: background 180ms ease;
+  }
+  .testimonial-play-cue::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--teal);
+    border-radius: inherit;
+    animation: testimonial-play-pulse 2.4s ease-out infinite;
+  }
+  .testimonial-play-cue svg { width: 55%; height: 55%; }
+  .testimonial-poster:hover .testimonial-play-cue,
+  .testimonial-poster:focus-visible .testimonial-play-cue { background: var(--forest); }
+  @keyframes testimonial-play-pulse {
+    0% { transform: scale(1); opacity: .65; }
+    75%, 100% { transform: scale(1.65); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-play-cue { transition: none; }
+    .testimonial-play-cue::before { animation: none; opacity: 0; }
+  }
   .testimonial-poster:focus-visible,
   .testimonial-video:focus-visible {
     outline: 3px solid var(--teal);
