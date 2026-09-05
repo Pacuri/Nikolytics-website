@@ -1,3 +1,5 @@
+import TestimonialVideo from "@/components/TestimonialVideo";
+
 const proofs = [
   ["Shane no longer needs to build a large operations team just to keep the foundation running.", "A team of 5 now handles what 15 used to do."],
   ["No more chasing forms, updating spreadsheets or entering the same information more than once.", "What used to take hours now takes minutes."],
@@ -37,20 +39,13 @@ export default function CaseStudy() {
 
         <div className="spread">
           <div className="spread-media reveal">
-            <div className="video" role="img" aria-label="Reserved space for the on-camera testimonial, currently in production">
-              <div className="wash" />
-              <div className="video-play" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 1.5v13l11-6.5z" /></svg>
-              </div>
-              <span className="name">Shane, American Paragons Foundation</span>
-              <span className="mono">Testimonial in production</span>
-            </div>
+            <TestimonialVideo />
             <blockquote className="quote quote-slot">
               <p>
                 Information is entered once and flows everywhere it&rsquo;s needed. Work that used to take me hours a week now
                 takes minutes.
               </p>
-              <cite>Shane, American Paragons Foundation</cite>
+              <cite>Shane Fisher, American Paragons Foundation</cite>
             </blockquote>
           </div>
 

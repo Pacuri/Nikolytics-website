@@ -200,31 +200,60 @@
   .proof b { font-weight: 600; color: var(--forest); }
   .quote.quote-slot { margin: clamp(40px, 6vh, 64px) 0 0; max-width: 36ch; }
 
-  .video {
+  .testimonial-player {
     position: relative;
+    width: 100%;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
-    display: flex; align-items: flex-end; justify-content: space-between;
-    padding: 22px 24px;
+    background: var(--forest);
+    isolation: isolate;
   }
-  .video .wash {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(180deg, rgba(16,44,38,0) 60%, rgba(16,44,38,.12) 100%),
-      linear-gradient(160deg, #E2EAE1 0%, #CBD8CE 100%);
+  .testimonial-player.is-active {
+    aspect-ratio: auto;
+    height: min(75svh, 720px);
+    min-height: 240px;
   }
-  .video-play {
-    position: absolute; left: 50%; top: 50%;
-    width: 68px; height: 68px; margin: -34px 0 0 -34px;
-    border: 1px solid rgba(16,44,38,.45); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; color: var(--forest);
-    transition: border-color 300ms ease, transform 300ms ease;
+  .testimonial-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
-  .video:hover .video-play { border-color: var(--forest); transform: scale(1.04); }
-  .video-play svg { width: 16px; height: 16px; margin-left: 3px; }
-  .video .name, .video .mono { position: relative; }
-  .video .mono { color: rgba(16,44,38,.7); }
-  .video .name { font-size: 14px; font-weight: 500; color: var(--forest); }
+  .testimonial-poster {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: var(--cream);
+    cursor: pointer;
+  }
+  .testimonial-poster img { object-fit: contain; }
+  .testimonial-poster:focus-visible,
+  .testimonial-video:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 4px;
+  }
+  .testimonial-error {
+    position: absolute;
+    inset: 0 0 auto;
+    margin: 0;
+    padding: 16px;
+    color: var(--cream);
+    background: var(--forest);
+    font-size: 14px;
+  }
+  .testimonial-error a { text-decoration: underline; }
+  .testimonial-player noscript a {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 1;
+    padding: 12px;
+    background: var(--cream);
+    color: var(--forest);
+    text-decoration: underline;
+  }
 
   .quote { margin: 0; }
   .quote p {
