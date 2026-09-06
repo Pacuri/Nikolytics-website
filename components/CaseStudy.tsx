@@ -62,7 +62,7 @@ export default function CaseStudy() {
 
         <details className="account reveal">
           <summary>
-            Read Shane&rsquo;s complete testimonial <span className="plus" aria-hidden="true" />
+            Read Shane&rsquo;s written testimonial <span className="plus" aria-hidden="true" />
           </summary>
           <div className="account-body">
             <div className="who">Supplied testimonial, reproduced unedited.</div>
